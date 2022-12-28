@@ -1,10 +1,12 @@
+import configparser
 import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import configparser
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 config = configparser.ConfigParser()
 config.read('adress.cfg')

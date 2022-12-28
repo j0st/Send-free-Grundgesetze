@@ -1,1 +1,1 @@
-# getGG
+# Send your friends free Grundgesetze

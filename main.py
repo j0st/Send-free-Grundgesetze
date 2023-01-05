@@ -13,7 +13,7 @@ config.read('adress.cfg')
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
-#options.headless = True
+options.headless = True
 driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
 
 
@@ -49,9 +49,9 @@ def main():
         # submit page
         driver.find_element(By.XPATH, '//*[@id="app"]/main/form/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/label').click()
         driver.find_element(By.XPATH, '//*[@id="app"]/main/form/div[2]/div[2]/div/div[2]/div[3]/div/div[3]/div/label').click()
-        #driver.find_element(By.XPATH, '//*[@id="submit-shop-order"]/button').click()
-        print('passed')
-        time.sleep(10)
+        driver.find_element(By.XPATH, '//*[@id="submit-shop-order"]/button').click()
+        print('You successfully ordered ' + config.get('AMOUNT','AMOUNT') + ' Grundgesetze!')
+        time.sleep(20)
     except:
         print('Sorry, something went wrong...')
     finally:    
